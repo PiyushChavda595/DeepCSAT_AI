@@ -1,5 +1,5 @@
 import streamlit as st
-from keras.models import load_model
+import tensorflow as tf
 import joblib
 import numpy as np
 import pandas as pd
@@ -65,7 +65,7 @@ font-size:18px;
 # --------------------------
 # Load Model
 # --------------------------
-model = load_model("csat_ann_model.keras")
+model = tf.keras.models.load_model("csat_ann_model.keras")
 scaler = joblib.load("scaler.pkl")
 features = joblib.load("features.pkl")
 
